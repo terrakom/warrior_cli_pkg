@@ -11,7 +11,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 '''
 from warrior.Framework import Utils
-import cli
 from cli.Utils import cli_Utils
 from warrior.Framework.Utils.print_Utils import print_warning
 from warrior.Framework.Utils.testcase_Utils import pNote
@@ -206,7 +205,7 @@ class CliActions(object):
                 connect_testdata = Utils.data_Utils.get_object_from_datarepository(session_id+"_system",
                                                                                    verbose=False)
                 if connect_testdata is not None and connect_testdata is not False:
-                    cli.Utils.cli_Utils.smart_action(self.datafile, call_system_name, "",
+                   cli_Utils.smart_action(self.datafile, call_system_name, "",
                                                  wc_obj.conn_obj.target_host,
                                                  "disconnect", connect_testdata)
 
@@ -379,7 +378,7 @@ class CliActions(object):
                               " is successful".format(system_name, subsystem_name, session_name))
 
                         # execute smart action to produce user report
-                        smart_result = cli.Utils.cli_Utils.smart_action(self.datafile,
+                        smart_result = cli_Utils.smart_action(self.datafile,
                                                                     call_system_name, conn_string,
                                                                     wc_obj.conn_obj.target_host,
                                                                     "connect")
@@ -497,7 +496,7 @@ class CliActions(object):
             if credentials is not None and credentials is not False:
                 if not credentials["custom_keystroke"]:
                     credentials["custom_keystroke"] = "wctrl:M"
-                credentials = cli.Utils.cli_Utils.get_connection_port("telnet", credentials)
+                credentials = cli_Utils.get_connection_port("telnet", credentials)
                 credentials['logfile'] = Utils.file_Utils.getCustomLogFile(self.filename,
                                                                            self.logsdir,
                                                                            'telnet_{0}_'.format(
@@ -537,7 +536,7 @@ class CliActions(object):
                                                                   subsystem_name, session_name))
 
                         # execute smart action to produce user report
-                        smart_result = cli.Utils.cli_Utils.smart_action(self.datafile,
+                        smart_result = cli_Utils.smart_action(self.datafile,
                                                                     call_system_name,
                                                                     conn_string,
                                                                     wc_obj.conn_obj.target_host,
@@ -589,7 +588,7 @@ class CliActions(object):
                 command_status, _ = session_object.send_command(start_prompt, end_prompt,
                                                                 command, int_timeout)
             else:
-                command_status, _ = cli.Utils.cli_Utils.send_command(session_object, start_prompt,
+                command_status, _ = cli_Utils.send_command(session_object, start_prompt,
                                                                  end_prompt, command, int_timeout)
 
         else:
