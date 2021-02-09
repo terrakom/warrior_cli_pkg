@@ -11,14 +11,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 '''
 from warrior.Framework import Utils
-from clipkg.cli.Utils import cli_Utils
+from cli.Utils import cli_Utils
 from warrior.Framework.Utils.print_Utils import print_warning
 from warrior.Framework.Utils.testcase_Utils import pNote
 from warrior.Framework.Utils.data_Utils import getSystemData, get_session_id, get_credentials
 from warrior.Framework.Utils.encryption_utils import decrypt
 from warrior.WarriorCore.Classes.warmock_class import mockready
 from warrior.WarriorCore.Classes.war_cli_class import WarriorCliClass
-from clipkg.cli.ClassUtils.WNetwork.warrior_cli_class import WarriorCli
+from cli.ClassUtils.WNetwork.warrior_cli_class import WarriorCli
 """This is the cli_actions module that has all cli related keywords """
 
 
