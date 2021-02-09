@@ -11,6 +11,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 '''
 from warrior.Framework import Utils
+import cli
 from cli.Utils import cli_Utils
 from warrior.Framework.Utils.print_Utils import print_warning
 from warrior.Framework.Utils.testcase_Utils import pNote
