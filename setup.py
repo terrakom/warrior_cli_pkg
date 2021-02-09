@@ -34,7 +34,6 @@ setup(
     classifiers=['Development Status :: 5 - Production/Stable',
                  'License :: OSI Approved :: Apache Software License',
                  'Programming Language :: Python :: 3.6',],
-    install_requires=["selenium==3.8.0",
-                      "pyvirtualdisplay==0.2.1"]
+    install_requires=["pexpect==4.8.0", "pycryptodome==3.6.1"]
 
 )
