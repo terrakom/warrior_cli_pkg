@@ -521,7 +521,7 @@ class CliActions(object):
                     output_dict[session_id + "_td_response"] = {}
                     result = True
                 else:
-                    from warrior.Framework.ClassUtils.WNetwork.warrior_cli_class import PexpectConnect
+                    from cli.ClassUtils.WNetwork.warrior_cli_class import PexpectConnect
                     wc_obj.conn_obj = PexpectConnect(credentials)
                     wc_obj.conn_obj.connect_telnet()
 
