@@ -12,7 +12,7 @@ limitations under the License.
 '''
 import os
 from warrior.Framework.Utils.print_Utils import print_info, print_warning
-from cli.ClassUtils import WNetwork, ssh_utils_class
+from warriorcli.ClassUtils import WNetwork, ssh_utils_class
 from warrior.WarriorCore.Classes.warmock_class import mocked
 from warrior.WarriorCore.Classes.war_cli_class import WarriorCliClass
 

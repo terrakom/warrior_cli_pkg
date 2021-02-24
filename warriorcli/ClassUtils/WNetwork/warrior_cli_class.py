@@ -25,8 +25,8 @@ from warrior.Framework.Utils.print_Utils import print_info, print_debug,\
  print_warning, print_exception, print_error, print_without_logging
 from warrior.Framework.Utils.testcase_Utils import pNote
 from warrior.Framework.ClassUtils import database_utils_class
-from cli.ClassUtils.WNetwork.loging import ThreadedLog
-from cli.Utils.list_Utils import get_list_by_separating_strings
+from warriorcli.ClassUtils.WNetwork.loging import ThreadedLog
+from warriorcli.Utils.list_Utils import get_list_by_separating_strings
 from warrior.Framework.Utils.data_Utils import get_object_from_datarepository
 from warrior.WarriorCore.Classes.warmock_class import mocked
 from timeit import itertools

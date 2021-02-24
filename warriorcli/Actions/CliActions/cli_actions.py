@@ -11,14 +11,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 '''
 from warrior.Framework import Utils
-from cli.Utils import cli_Utils
+from warriorcli.Utils import cli_Utils
 from warrior.Framework.Utils.print_Utils import print_warning
 from warrior.Framework.Utils.testcase_Utils import pNote
 from warrior.Framework.Utils.data_Utils import getSystemData, get_session_id, get_credentials
 from warrior.Framework.Utils.encryption_utils import decrypt
 from warrior.WarriorCore.Classes.warmock_class import mockready
 from warrior.WarriorCore.Classes.war_cli_class import WarriorCliClass
-from cli.ClassUtils.WNetwork.warrior_cli_class import WarriorCli
+from warriorcli.ClassUtils.WNetwork.warrior_cli_class import WarriorCli
 """This is the cli_actions module that has all cli related keywords """
 
 
@@ -361,10 +361,10 @@ class CliActions(object):
                     result = True
                 else:
                     if credentials['conn_type'] == "SSH_NESTED":
-                        from cli.ClassUtils.WNetwork.warrior_cli_class import ParamikoConnect
+                        from warriorcli.ClassUtils.WNetwork.warrior_cli_class import ParamikoConnect
                         wc_obj.conn_obj = ParamikoConnect(credentials)
                     else:
-                        from cli.ClassUtils.WNetwork.warrior_cli_class import PexpectConnect
+                        from warriorcli.ClassUtils.WNetwork.warrior_cli_class import PexpectConnect
                         wc_obj.conn_obj = PexpectConnect(credentials)
                     wc_obj.conn_obj.connect_ssh()
 
@@ -521,7 +521,7 @@ class CliActions(object):
                     output_dict[session_id + "_td_response"] = {}
                     result = True
                 else:
-                    from cli.ClassUtils.WNetwork.warrior_cli_class import PexpectConnect
+                    from warriorcli.ClassUtils.WNetwork.warrior_cli_class import PexpectConnect
                     wc_obj.conn_obj = PexpectConnect(credentials)
                     wc_obj.conn_obj.connect_telnet()
 
@@ -536,7 +536,7 @@ class CliActions(object):
                                                                   subsystem_name, session_name))
 
                         # execute smart action to produce user report
-                        smart_result = cli_Utils.smart_action(self.datafile,
+                        smart_result = warriorcli_Utils.smart_action(self.datafile,
                                                                     call_system_name,
                                                                     conn_string,
                                                                     wc_obj.conn_obj.target_host,
